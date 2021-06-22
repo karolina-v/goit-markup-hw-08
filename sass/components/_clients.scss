@@ -1,6 +1,7 @@
 /* постоянные клиенты */
 .clients {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .clients__group:not(:last-child) {
@@ -12,7 +13,6 @@
   justify-content: center;
   align-items: center;
 
-  width: 170px;
   height: 92px;
 
   color: var(--icon-fill-color);
@@ -21,6 +21,18 @@
 
   transition: border-color 250ms var(--timing-function),
     color 250ms var(--timing-function);
+
+  @media screen and (min-width: $mobile) {
+    flex-basis: 210px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: 226px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: 170px;
+  }
 }
 
 .clients__icon:hover,

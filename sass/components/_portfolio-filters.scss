@@ -1,8 +1,19 @@
 .btns-filters {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 
-  margin-bottom: 50px;
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .filters__item:not(:last-child) {

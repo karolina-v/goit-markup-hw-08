@@ -29,13 +29,20 @@
   transform: translate(-50%, -50%) scale(1);
 
   padding: 40px;
-  min-width: 528px;
 
   background-color: var(--primery-bg-color);
   box-shadow: var(--modal-shadow);
   border-radius: 4px;
 
   transition: transform 250ms var(--timing-function);
+
+  @media screen and (min-widht: $mobile) and (min-width: $desktop) {
+    flex-basis: 450px;
+  }
+
+  @media screen and (min-widht: $desktop) {
+    flex-basis: 528px;
+  }
 }
 
 .modal__close-btn {

@@ -92,7 +92,10 @@
 
 /* контакты в шапке */
 .contacts {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+
   margin-left: auto;
 }
 

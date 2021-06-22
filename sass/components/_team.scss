@@ -4,16 +4,29 @@
 }
 
 .team__list {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team__member {
-  width: calc((100% - 90px) / 4);
-
   background-color: var(--primery-bg-color);
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
+
+  @media screen and (min-width: $mobile) {
+    flex-basis: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .team__member:not(:last-child) {

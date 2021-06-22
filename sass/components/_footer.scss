@@ -6,12 +6,23 @@
 }
 
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
 }
 
 .footer__address {
   margin-right: 70px;
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 165px;
+  }
 }
 
 .footer__logo {
@@ -59,6 +70,14 @@
 .footer__social {
   margin: 0;
   margin-right: 93px;
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 102px;
+  }
 }
 
 .social__title {

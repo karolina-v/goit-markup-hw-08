@@ -19,6 +19,18 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  @media (min-width: $mobile) and (max-width: 1199px) {
+    height: 400px;
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 768px;
+  }
 }
 
 .banner__title {

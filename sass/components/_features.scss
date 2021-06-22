@@ -1,10 +1,23 @@
 /* особенности */
 .features {
-  display: flex;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
-  width: calc((100% - 90px) / 4);
+  @media screen and (min-width: $mobile) {
+    flex-basis: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .features__item:not(:last-child) {
@@ -31,6 +44,10 @@
   text-transform: uppercase;
 
   color: var(--primery-text-color);
+
+  @media (min-width: $mobile) and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features__text {

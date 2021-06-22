@@ -5,10 +5,16 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 
-  padding-top: 80px;
-
   background-color: var(--primery-bg-color);
   color: var(--primery-text-color);
+
+  @media screen and (min-width: $mobile) {
+    padding-top: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 80px;
+  }
 }
 
 /* все img-файлы */
@@ -33,12 +39,25 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    flex-basis: 480px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-basis: 768px;
+  }
 }
 
 /* все секции, кроме баннера */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+
+  @media (min-width: $mobile) and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 /* все заголовки секций */
