@@ -1333,13 +1333,17 @@ img {
 }
 
 .check__input:checked + .check__icon {
-  background-image: url(../../images/check.svg);
+  background-image: url(../images/check.svg);
   background-color: var(--accent-color);
   border-color: transparent;
   background-size: cover;
   background-origin: border-box;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.check__input:focus + .check__icon {
+  border-color: var(--accent-color);
 }
 
 .check__contract-link {
