@@ -1,0 +1,84 @@
+/* наша команда */
+.section__team {
+  background-color: var(--icon-bg-color);
+}
+
+.team__list {
+  display: flex;
+}
+
+.team__member {
+  width: calc((100% - 90px) / 4);
+
+  background-color: var(--primery-bg-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+}
+
+.team__member:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
+.member__content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.member__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  color: var(--primery-text-color);
+}
+
+.member__position {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  color: var(--title-text-color);
+}
+
+.member__pages {
+  display: flex;
+  justify-content: center;
+}
+
+.member__page:not(:last-child) {
+  margin-right: 10px;
+}
+
+.page__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--icon-fill-color);
+
+  transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+}
+
+.page__icon:hover,
+.page__icon:focus {
+  background-color: var(--accent-color);
+  color: var(--primery-bg-color);
+}
+
+.page__icon .icon {
+  fill: currentColor;
+}

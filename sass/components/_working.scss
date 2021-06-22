@@ -1,0 +1,44 @@
+/* чем мы занимаемся */
+.section__working {
+  padding-top: 0;
+}
+
+.working__list {
+  display: flex;
+}
+
+.working__item {
+  position: relative;
+
+  width: calc((100% - 60px) / 3);
+}
+
+.working__item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
+.working__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: var(--work-title-bg-color);
+}
+
+.work__title {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 0.9;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}

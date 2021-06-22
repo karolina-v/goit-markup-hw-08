@@ -1,0 +1,44 @@
+/* особенности */
+.features {
+  display: flex;
+}
+
+.features__item {
+  width: calc((100% - 90px) / 4);
+}
+
+.features__item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
+.features__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--icon-bg-color);
+  border-radius: 4px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--primery-text-color);
+}
+
+.features__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: var(--title-text-color);
+}

@@ -1,0 +1,106 @@
+/* подвал */
+.footer {
+  padding: 60px 0;
+
+  background-color: var(--second-bg-color);
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__address {
+  margin-right: 70px;
+}
+
+.footer__logo {
+  display: inline-block;
+
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.footer__logo-part {
+  color: var(--logo-footer-part-color);
+}
+
+.address {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.7;
+
+  color: var(--white-text-color);
+}
+
+.address__text {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+/* контакты в подвале */
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  color: var(--contacts-footer-color);
+  text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
+}
+
+.address__link:hover,
+.address__link:focus,
+.address__link:active {
+  color: var(--accent-color);
+}
+
+.footer__social {
+  margin: 0;
+  margin-right: 93px;
+}
+
+.social__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: left;
+
+  color: var(--white-text-color);
+}
+
+.social__pages {
+  display: flex;
+}
+
+.social__page:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  color: var(--primery-bg-color);
+  background-color: var(--footer-icon-bg-color);
+  border-radius: 50%;
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.social__icon:hover,
+.social__icon:focus {
+  background-color: var(--accent-color);
+}
+
+.social__icon .icon {
+  fill: currentColor;
+}

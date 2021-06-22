@@ -1,0 +1,57 @@
+/* баннер */
+.banner {
+  max-width: 1600px;
+  height: 600px;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background-color: var(--second-bg-color);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/img-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner__title {
+  margin-top: 0;
+  margin-bottom: var(--card-gap);
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: var(--white-text-color);
+}
+
+/* кнопка в баннере */
+.banner__button {
+  padding: 10px 32px;
+  min-width: 200px;
+
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: var(--white-text-color);
+  background-color: var(--accent-color);
+  border: transparent;
+  box-shadow: var(--banner-button-shadow);
+
+  transition: background-color 250ms var(--timing-function);
+}
+
+.banner__button:hover,
+.banner__button:focus {
+  background-color: var(--banner-btn-hover-color);
+}

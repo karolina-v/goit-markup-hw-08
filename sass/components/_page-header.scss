@@ -1,0 +1,137 @@
+.page-header {
+  border-bottom: 1px solid var(--border-header-color);
+
+  min-height: 80px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  background-color: var(--primery-bg-color);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__links {
+  display: flex;
+  align-items: center;
+}
+
+.page-header .link {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+/* логотип в шапке */
+.logo {
+  margin-right: 93px;
+
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  color: var(--accent-color);
+}
+
+.logo-part {
+  color: var(--logo-header-part-color);
+}
+
+/* навигация сайта */
+.site-nav {
+  display: flex;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--primery-text-color);
+
+  transition: color 250ms var(--timing-function);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus,
+.site-nav__link:active {
+  color: var(--accent-color);
+}
+
+.site-nav__link.current {
+  position: relative;
+
+  color: var(--accent-color);
+}
+
+.site-nav__link.current::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
+/* контакты в шапке */
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.contacts__item {
+  color: var(--contacts-header-color);
+}
+
+.contacts__link {
+  display: flex;
+
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--contacts-header-color);
+
+  transition: color 250ms var(--timing-function);
+}
+
+.contacts__link:hover,
+.contacts__link:focus,
+.contacts__link:active {
+  color: var(--accent-color);
+}
+
+.contacts__icon {
+  margin-right: 10px;
+
+  fill: currentColor;
+
+  transition: fill 250ms var(--timing-function);
+}
+
+.contacts__icon:hover,
+.contacts__icon:focus {
+  fill: var(--accent-color);
+}
