@@ -1,16 +1,28 @@
 /* модальное окно */
 .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
+  @media screen and (min-width: $desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
 
   width: 100%;
   height: 100%;
+
+  overflow-y: scroll;
 
   background-color: var(--modal-bg-overlay-color);
 
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
+
+  @media screen and (min-width: $mobile) {
+    padding: 93px 15px 94px 15px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    padding: 208px 159px 207px 159px;
+  }
 }
 
 .is-hidden {
@@ -36,12 +48,14 @@
 
   transition: transform 250ms var(--timing-function);
 
-  @media screen and (min-widht: $mobile) and (min-width: $desktop) {
-    flex-basis: 450px;
+  @media screen and (min-width: $mobile) and (min-width: 1199px) {
+    max-width: 450px;
+    width: 100%;
   }
 
-  @media screen and (min-widht: $desktop) {
-    flex-basis: 528px;
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    width: 100%;
   }
 }
 
@@ -221,25 +235,6 @@
 
 .check__contract-link {
   color: var(--accent-color);
-}
-
-.submit-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 200px;
-  height: 50px;
-  padding: 10px;
-
-  font-weight: 700;
-  line-height: 0.53;
-  letter-spacing: 0.06em;
-
-  color: var(--white-text-color);
-  background-color: var(--accent-color);
-  border: transparent;
-  box-shadow: var(--banner-button-shadow);
 }
 
 .modal__submit-btn {

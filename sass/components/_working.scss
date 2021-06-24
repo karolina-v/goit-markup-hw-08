@@ -1,6 +1,10 @@
 /* чем мы занимаемся */
 .section__working {
   padding-top: 0;
+
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .working__list {

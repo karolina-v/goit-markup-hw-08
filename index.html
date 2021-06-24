@@ -4,14 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <title>Портфолио</title> 
 
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link 
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
             rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
-        <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
 
         <link rel="stylesheet" href="./css/main.min.css" /> 
     </head>
@@ -53,8 +54,55 @@
                         </a>
                     </li>
                 </ul>
-            </div>
-        </header>
+
+                <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="menu-icon" href="./images/icons.svg#menu"></use>
+                        <use class="cross-icon" href="./images/icons.svg#close-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="menu-container is-open" id="menu-container" data-menu>
+                    
+                    <ul class="menu__nav list">
+                        <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link link current">Студия</a></li>
+                        <li class="menu-nav__item"><a href="./portfolio.html" class="menu-nav__link link">Портфолио</a></li>
+                        <li class="menu-nav__item"><a href="./contacts.html" class="menu-nav__link link">Контакты</a></li>
+                    </ul>
+
+                    <ul class="menu__contacts list">
+                        <li class="menu-contacts__item">
+                            <a href="mailto:info@devstudio.com" class="menu-contacts__link mail link">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="menu-contacts__item">
+                            <a href="tel:+380961111111" class="menu-contacts__link tel link">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu__socials list">
+                        <li class="social__page item">
+                            <a href="" class="page__link link" aria-label="Instagram">Instagram</a>
+                        </li>
+                    
+                        <li class="social__page item">
+                            <a href="" class="page__link link" aria-label="Twitter">Twitter</a>
+                        </li>
+                    
+                        <li class="social__page item">
+                            <a href="" class="page__link link" aria-label="Facebook">Facebook</a>
+                        </li>
+                    
+                        <li class="social__page item">
+                            <a href="" class="page__link link" aria-label="Linkedin">Linkedin</a>
+                        </li>
+                    </ul>
+                </div> 
+            </div> 
+        </header> 
 
         <main>
             <!-- Баннер -->
@@ -368,59 +416,61 @@
         <!-- Подвал -->
         <footer class="footer">
             <div class="footer__container container">
-                <div class="footer__address">
-                    <!-- Логотип, название сайта и ссылка на Главную-->
-                    <a class="footer__logo logo" href="/">
-                        Web<span class="footer__logo-part">Studio</span>
-                    </a>
+                <div class="footer__adress-pages">
+                    <div class="footer__address">
+                        <!-- Логотип, название сайта и ссылка на Главную-->
+                        <a class="footer__logo logo" href="/">
+                            Web<span class="footer__logo-part">Studio</span>
+                        </a>
 
-                    <address class="address">
-                        <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
-                
-                        <ul class="list">
-                            <li class="address__item"><a href="mailto:info@devstudio.com" class="address__link link">info@devstudio.com</a></li>
-                            <li class="address__item"><a href="tel:+380961111111" class="address__link link">+38 096 111 11 11</a></li>
+                        <address class="address">
+                            <p class="address__text">г. Киев, пр-т Леси Украинки, 26</p>
+                    
+                            <ul class="list">
+                                <li class="address__item"><a href="mailto:info@devstudio.com" class="address__link link">info@devstudio.com</a></li>
+                                <li class="address__item"><a href="tel:+380961111111" class="address__link link">+38 096 111 11 11</a></li>
+                            </ul>
+                        </address>
+                    </div>
+
+                    <div class="footer__social">
+                        <h3 class="social__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
+
+                        <ul class="social__pages list">
+                            <li class="social__page item">
+                                <a href="" class="social__icon link" aria-label="Instagram">
+                                    <svg class="icon" width="20" height="20">
+                                        <use href="./images/icons.svg#instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        
+                            <li class="social__page item">
+                                <a href="" class="social__icon link" aria-label="Twitter">
+                                    <svg class="icon" width="20" height="20">
+                                        <use href="./images/icons.svg#twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        
+                            <li class="social__page item">
+                                <a href="" class="social__icon link" aria-label="Facebook">
+                                    <svg class="icon" width="20" height="20">
+                                        <use href="./images/icons.svg#facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        
+                            <li class="social__page item">
+                                <a href="" class="social__icon link" aria-label="Linkedin">
+                                    <svg class="icon" width="20" height="20">
+                                        <use href="./images/icons.svg#linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
                         </ul>
-                    </address>
-                </div>
 
-                <div class="footer__social">
-                    <h3 class="social__title">ПРИСОЕДИНЯЙТЕСЬ</h3>
-
-                    <ul class="social__pages list">
-                        <li class="social__page item">
-                            <a href="" class="social__icon link" aria-label="Instagram">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    
-                        <li class="social__page item">
-                            <a href="" class="social__icon link" aria-label="Twitter">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    
-                        <li class="social__page item">
-                            <a href="" class="social__icon link" aria-label="Facebook">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    
-                        <li class="social__page item">
-                            <a href="" class="social__icon link" aria-label="Linkedin">
-                                <svg class="icon" width="20" height="20">
-                                    <use href="./images/icons.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-
+                    </div>
                 </div>
 
                 <form class="footer__form">
@@ -498,5 +548,6 @@
         </div>
 
         <script src="./js/modal.js"></script> 
+        <script src="./js/menu.js"></script>
     </body>
 </html>

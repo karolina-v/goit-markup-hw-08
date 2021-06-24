@@ -13,6 +13,7 @@
 }
 
 .page-header__container {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -31,7 +32,17 @@
 
 /* логотип в шапке */
 .logo {
-  margin-right: 93px;
+  @media screen and (min-width: $mobile) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+  }
 
   font-family: Raleway, sans-serif;
   font-size: 26px;
@@ -48,6 +59,10 @@
 /* навигация сайта */
 .site-nav {
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -96,11 +111,19 @@
     display: flex;
   }
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   margin-left: auto;
 }
 
 .contacts__item:not(:last-child) {
   margin-right: 30px;
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin: 0 0 10px 0;
+  }
 }
 
 .contacts__item {
@@ -108,9 +131,10 @@
 }
 
 .contacts__link {
-  display: flex;
-
-  align-items: center;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: center;
+  }
 
   padding-top: 32px;
   padding-bottom: 32px;

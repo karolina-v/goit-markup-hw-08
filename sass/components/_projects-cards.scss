@@ -7,35 +7,22 @@
 }
 
 .project {
+  margin-right: var(--card-gap);
+  margin-bottom: var(--card-gap);
+
   background-color: var(--primery-bg-color);
 
   @media screen and (min-width: $mobile) {
-    flex-basis: 450px;
+    width: 450px;
   }
 
   @media screen and (min-width: $tablet) {
-    flex-basis: calc((100% - 30px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
   }
 
   @media screen and (min-width: $desktop) {
-    flex-basis: calc((100% - 60px) / 3);
+    width: calc((100% - 3 * 30px) / 3);
   }
-}
-
-.project:not(:nth-child(3n)) {
-  @media screen and (min-width: $desktop) {
-    margin-right: var(--card-gap);
-  }
-}
-
-.project {
-  @media screen and (min-width: $mobile) {
-    margin-bottom: var(--card-gap);
-  }
-}
-
-.project:not(:nth-last-child(-n + 3)) {
-  margin-bottom: var(--card-gap);
 }
 
 .project__link {
@@ -109,7 +96,7 @@
   margin-bottom: 4px;
 
   font-size: 18px;
-  line-height: 2;
+  line-height: 36px;
   letter-spacing: 0.06em;
 
   color: var(--primery-text-color);
@@ -120,7 +107,7 @@
 
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 30px;
 
   color: var(--title-text-color);
 }

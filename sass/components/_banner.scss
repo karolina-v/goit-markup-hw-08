@@ -1,10 +1,5 @@
 /* баннер */
 .banner {
-  max-width: 1600px;
-  height: 600px;
-
-  padding-top: 200px;
-  padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
 
@@ -22,6 +17,8 @@
 
   @media (min-width: $mobile) and (max-width: 1199px) {
     height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 
   @media screen and (min-width: $mobile) {
@@ -31,6 +28,13 @@
   @media screen and (min-width: $tablet) {
     width: 768px;
   }
+
+  @media screen and (min-width: $desktop) {
+    width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .banner__title {
@@ -38,12 +42,21 @@
   margin-bottom: var(--card-gap);
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
 
   color: var(--white-text-color);
+
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* кнопка в баннере */

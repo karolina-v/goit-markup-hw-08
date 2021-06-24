@@ -1,23 +1,30 @@
 .btns-filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   @media screen and (min-width: $mobile) {
     margin-bottom: 40px;
   }
 
   @media screen and (min-width: $tablet) {
+    justify-content: center;
     margin-bottom: 30px;
   }
 
   @media screen and (min-width: $desktop) {
+    justify-content: center;
     margin-bottom: 50px;
   }
 }
 
 .filters__item:not(:last-child) {
   margin-right: 8px;
+}
+
+.filters__item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter__button {

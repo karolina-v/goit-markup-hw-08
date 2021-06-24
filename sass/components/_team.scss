@@ -17,15 +17,17 @@
   overflow: hidden;
 
   @media screen and (min-width: $mobile) {
-    flex-basis: 450px;
+    width: 450px;
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: $tablet) {
-    flex-basis: calc((100% - 30px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
+    margin-bottom: 30px;
   }
 
   @media screen and (min-width: $desktop) {
-    flex-basis: calc((100% - 90px) / 4);
+    width: calc((100% - 90px) / 4);
   }
 }
 

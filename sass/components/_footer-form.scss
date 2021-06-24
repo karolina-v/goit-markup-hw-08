@@ -1,28 +1,39 @@
 .footer__form {
   margin: 0;
-  margin-left: auto;
 
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
     margin-top: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
   }
 }
 
 .footer__form-title {
   margin-bottom: 20px;
 
-  text-align: left;
   color: var(--white-text-color);
+
+  @media screen and (min-width: $mobile) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .form__container {
   @media screen and (min-width: $desktop) {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .footer__form-input {
   height: 50px;
-  margin-right: 12px;
   padding: 15px 16px;
   outline: none;
 
@@ -34,11 +45,15 @@
   color: var(--white-text-color);
 
   @media screen and (min-width: $mobile) {
-    flex-basis: 450px;
+    width: 450px;
+    margin: auto;
+    margin-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    flex-basis: 358px;
+    width: 358px;
+    margin: 0;
+    margin-right: 12px;
   }
 }
 
@@ -53,4 +68,10 @@
 
 .footer__send-icon {
   margin-left: 10px;
+}
+
+.footer__form .submit-btn {
+  @media screen and (min-width: $mobile) and (max-width: 1199px) {
+    margin: auto;
+  }
 }
