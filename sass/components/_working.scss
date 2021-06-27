@@ -14,7 +14,7 @@
 .working__item {
   position: relative;
 
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 3 * 30px) / 3);
 }
 
 .working__item:not(:last-child) {

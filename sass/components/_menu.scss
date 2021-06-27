@@ -1,15 +1,25 @@
 // Меню в мобильной версии
 .menu-button {
-  display: block;
+  display: inline-block;
   margin: 0;
+  margin-left: auto;
   padding: 12px 8px;
   border: none;
   background-color: transparent;
-  margin-left: auto;
 
   @media screen and (min-width: $tablet) {
     display: none;
   }
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  fill: var(--accent-color);
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  fill: var(--accent-color);
 }
 
 .menu-button .cross-icon {
@@ -24,20 +34,11 @@
   display: none;
 }
 
-.menu-button .menu-icon:hover,
-.menu-button .menu-icon:focus {
-  fill: var(--accent-color);
-}
-
-.menu-button .cross-icon:hover,
-.menu-button .cross-icon:focus {
-  fill: var(--accent-color);
-}
-
 .menu-container {
   background-color: var(--primery-bg-color);
   padding: 48px 40px;
   display: none;
+  overflow-y: scroll;
 
   @media screen and (max-width: 767px) {
     position: absolute;
@@ -104,4 +105,14 @@
   line-height: 0.81;
 
   color: var(--accent-color);
+}
+
+.social__page:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg) translateX(-1px);
+  transform-origin: left top;
+  margin-left: 10px;
+  margin-right: 10px;
 }

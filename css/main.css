@@ -569,17 +569,27 @@ img {
 }
 
 .menu-button {
-  display: block;
+  display: inline-block;
   margin: 0;
+  margin-left: auto;
   padding: 12px 8px;
   border: none;
   background-color: transparent;
-  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  fill: var(--accent-color);
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  fill: var(--accent-color);
 }
 
 .menu-button .cross-icon {
@@ -594,20 +604,11 @@ img {
   display: none;
 }
 
-.menu-button .menu-icon:hover,
-.menu-button .menu-icon:focus {
-  fill: var(--accent-color);
-}
-
-.menu-button .cross-icon:hover,
-.menu-button .cross-icon:focus {
-  fill: var(--accent-color);
-}
-
 .menu-container {
   background-color: var(--primery-bg-color);
   padding: 48px 40px;
   display: none;
+  overflow-y: scroll;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
@@ -675,16 +676,63 @@ img {
   color: var(--accent-color);
 }
 
+.social__page:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg) translateX(-1px);
+  transform-origin: left top;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* баннер */
 .banner {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-color: var(--second-bg-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/banner/mobile-banner.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner .banner {
+    background-image: url("../images/banner/mobile-banner@2x.jpg");
+  }
+}
+@media screen and (min-width: 481px) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/mobile-banner.jpg");
+  }
+}
+@media screen and (min-width: 481px) and (min-device-pixel-ratio: 2) and (min-width: 481px), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/mobile-banner@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/tablet-banner.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/tablet-banner@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .banner {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/desktop-banner.jpg");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .banner {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/desktop-banner@2x.jpg");
+  }
 }
 @media (min-width: 480px) and (max-width: 1199px) {
   .banner {
@@ -695,18 +743,18 @@ img {
 }
 @media screen and (min-width: 480px) {
   .banner {
-    width: 480px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .banner {
-    width: 1600px;
     height: 600px;
+    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -828,7 +876,7 @@ img {
 
 .working__item {
   position: relative;
-  width: calc((100% - 60px) / 3);
+  width: calc((100% - 3 * 30px) / 3);
 }
 
 .working__item:not(:last-child) {
@@ -876,7 +924,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .team__member {
-    width: 450px;
+    width: calc((100% - 1 * 30px) / 1);
     margin-bottom: 30px;
   }
 }
@@ -888,7 +936,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .team__member {
-    width: calc((100% - 90px) / 4);
+    width: calc((100% - 4 * 30px) / 4);
   }
 }
 
@@ -963,17 +1011,17 @@ img {
 }
 @media screen and (min-width: 480px) {
   .clients__group {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+    width: calc((100% - 2 * 30px) / 2);
   }
 }
 @media screen and (min-width: 768px) {
   .clients__group {
-    flex-basis: calc((100% - 3 * 30px) / 3);
+    width: calc((100% - 3 * 30px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__group {
-    flex-basis: calc((100% - 6 * 30px) / 6);
+    width: calc((100% - 6 * 30px) / 6);
   }
 }
 
@@ -1328,7 +1376,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .project {
-    width: 450px;
+    width: calc((100% - 1 * 30px) / 1);
   }
 }
 @media screen and (min-width: 768px) {
@@ -1403,7 +1451,6 @@ img {
   margin-bottom: 4px;
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 0.06em;
   color: var(--primery-text-color);
 }
 
@@ -1417,19 +1464,15 @@ img {
 
 /* модальное окно */
 .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   overflow-y: scroll;
   background-color: var(--modal-bg-overlay-color);
   opacity: 1;
   transition: opacity 250ms var(--timing-function);
-}
-@media screen and (min-width: 1200px) {
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
 }
 @media screen and (min-width: 480px) {
   .backdrop {

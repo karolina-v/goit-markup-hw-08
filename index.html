@@ -55,14 +55,14 @@
                     </li>
                 </ul>
 
-                <button type="button" class="menu-button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                         <use class="menu-icon" href="./images/icons.svg#menu"></use>
                         <use class="cross-icon" href="./images/icons.svg#close-menu"></use>
                     </svg>
                 </button>
 
-                <div class="menu-container is-open" id="menu-container" data-menu>
+                <div class="menu-container" id="menu-container" data-menu>
                     
                     <ul class="menu__nav list">
                         <li class="menu-nav__item"><a href="./index.html" class="menu-nav__link link current">Студия</a></li>
@@ -161,19 +161,35 @@
                     <h2 class="section__title">Чем мы занимаемся</h2>
                     <ul class="working__list list">
                         <li class="working__item">
-                            <img src="./images/img.jpg" alt="Компьютер" width="370" height="294">
+                            <img 
+                            srcset="./images/working/img.jpg 1x, ./images/working/img@2x.jpg 2x"
+                            src="./images/working/img.jpg" 
+                            alt="Компьютер" 
+                            width="370" height="294">
+
                             <div class="working__title">
                                 <h3 class="work__title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
                             </div>
                         </li>
+
                         <li class="working__item">
-                            <img src="./images/img2.jpg" alt="Телефон" width="370" height="294">
+                            <img 
+                            srcset="./images/working/img2.jpg 1x, ./images/working/img2@2x.jpg 2x"
+                            src="./images/working/img2.jpg" 
+                            alt="Телефон" 
+                            width="370" height="294">
+
                             <div class="working__title">
                                 <h3 class="work__title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
                             </div>
                         </li>
                         <li class="working__item">
-                            <img src="./images/img3.jpg" alt="Планшет" width="370" height="294">
+                            <img 
+                            srcset="./images/working/img3.jpg 1x, ./images/working/img3@2x.jpg 2x"
+                            src="./images/working/img3.jpg" 
+                            alt="Планшет" 
+                            width="370" height="294">
+
                             <div class="working__title">
                                 <h3 class="work__title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
                             </div>
@@ -188,7 +204,11 @@
                     <h2 class="section__title">Наша команда</h2>
                     <ul class="team__list list">
                         <li class="team__member">
-                            <img src="./images/photo1.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                            <img 
+                            srcset="./images/team/photo1.jpg 1x, ./images/team/photo1@2x.jpg 2x"
+                            src="./images/team/photo1.jpg" 
+                            alt="Игорь Демьяненко">
+
                             <div class="member__content">
                                 <h3 class="member__name">Игорь Демьяненко</h3>
                                 <p class="member__position">Product Designer</p>
@@ -229,7 +249,11 @@
                             </div>
                         </li>
                         <li class="team__member">
-                            <img src="./images/photo2.jpg" alt="Ольга Репина" width="270" height="260">
+                            <img 
+                            srcset="./images/team/photo2.jpg 1x, ./images/team/photo2@2x.jpg 2x"
+                            src="./images/team/photo2.jpg"
+                            alt="Ольга Репина">
+
                             <div class="member__content">
                                 <h3 class="member__name">Ольга Репина</h3>
                                 <p class="member__position">Frontend Developer</p>
@@ -270,7 +294,11 @@
                             </div>
                         </li>
                         <li class="team__member">
-                            <img src="./images/photo3.jpg" alt="Николай Тарасов" width="270" height="260">
+                            <img 
+                            srcset="./images/team/photo3.jpg 1x, ./images/team/photo3@2x.jpg 2x"
+                            src="./images/team/photo3.jpg"
+                            alt="Николай Тарасов">
+
                             <div class="member__content">
                                 <h3 class="member__name">Николай Тарасов</h3>
                                 <p class="member__position">Marketing</p>
@@ -311,7 +339,11 @@
                             </div>
                         </li>
                         <li class="team__member">
-                            <img src="./images/photo4.jpg" alt="Михаил Ермаков" width="270" height="260">
+                            <img 
+                            srcset="./images/team/photo4.jpg 1x, ./images/team/photo4@2x.jpg 2x"
+                            src="./images/team/photo4.jpg"
+                            alt="Михаил Ермаков">
+
                             <div class="member__content">
                                 <h3 class="member__name">Михаил Ермаков</h3>
                                 <p class="member__position">UI Designer</p>

@@ -32,6 +32,13 @@
 
 /* логотип в шапке */
 .logo {
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+
+  color: var(--accent-color);
+
   @media screen and (min-width: $mobile) {
     margin-right: 0;
   }
@@ -43,13 +50,6 @@
   @media screen and (min-width: $desktop) {
     margin-right: 93px;
   }
-
-  font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-
-  color: var(--accent-color);
 }
 
 .logo-part {

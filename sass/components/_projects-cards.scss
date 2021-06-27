@@ -13,7 +13,7 @@
   background-color: var(--primery-bg-color);
 
   @media screen and (min-width: $mobile) {
-    width: 450px;
+    width: calc((100% - 1 * 30px) / 1);
   }
 
   @media screen and (min-width: $tablet) {
@@ -97,7 +97,6 @@
 
   font-size: 18px;
   line-height: 36px;
-  letter-spacing: 0.06em;
 
   color: var(--primery-text-color);
 }
