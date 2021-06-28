@@ -4,6 +4,8 @@
 }
 
 .team__list {
+  margin-right: -30px;
+
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -15,24 +17,20 @@
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
+  margin-bottom: var(--card-gap);
+  margin-right: var(--card-gap);
 
   @media screen and (min-width: $mobile) {
-    width: calc((100% - 1 * 30px) / 1);
-    margin-bottom: 30px;
+    width: 450px;
   }
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - 2 * 30px) / 2);
-    margin-bottom: 30px;
   }
 
   @media screen and (min-width: $desktop) {
     width: calc((100% - 4 * 30px) / 4);
   }
-}
-
-.team__member:not(:last-child) {
-  margin-right: var(--card-gap);
 }
 
 .member__content {

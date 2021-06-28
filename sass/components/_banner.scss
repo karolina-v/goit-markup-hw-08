@@ -24,14 +24,14 @@
     }
   }
 
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: $mobile) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/banner/mobile-banner.jpg");
 
-    @media (min-device-pixel-ratio: 2) and (min-width: 481px),
+    @media (min-device-pixel-ratio: 2) and (min-width: $mobile),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: linear-gradient(

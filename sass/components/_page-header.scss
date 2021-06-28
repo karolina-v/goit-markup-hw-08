@@ -10,6 +10,11 @@
   z-index: 1;
 
   background-color: var(--primery-bg-color);
+
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    display: flex;
+    min-height: 60px;
+  }
 }
 
 .page-header__container {
@@ -38,6 +43,12 @@
   text-decoration: none;
 
   color: var(--accent-color);
+
+  @media screen and (max-width: 1199px) {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.08;
+  }
 
   @media screen and (min-width: $mobile) {
     margin-right: 0;
@@ -107,22 +118,24 @@
 
 /* контакты в шапке */
 .contacts {
-  @media screen and (min-width: $desktop) {
-    display: flex;
-  }
-
   @media screen and (max-width: 767px) {
     display: none;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
   }
 
   margin-left: auto;
 }
 
 .contacts__item:not(:last-child) {
-  margin-right: 30px;
-
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     margin: 0 0 10px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 30px;
   }
 }
 
@@ -134,10 +147,9 @@
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
-
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   color: var(--contacts-header-color);
 

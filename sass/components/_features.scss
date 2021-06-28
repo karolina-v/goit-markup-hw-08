@@ -3,12 +3,13 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin-right: -30px;
   }
 }
 
 .features__item {
   margin-bottom: var(--card-gap);
-  margin-right: var(--card-gap);
+  margin-right: 30px;
 
   @media screen and (min-width: $mobile) {
     width: 450px;
