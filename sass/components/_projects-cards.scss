@@ -12,6 +12,11 @@
   margin-right: var(--card-gap);
   margin-bottom: var(--card-gap);
 
+  // border-top: transparent;
+  // border-bottom: 1px solid var(--card-border-color);
+  // border-right: 1px solid var(--card-border-color);
+  // border-left: 1px solid var(--card-border-color);
+
   background-color: var(--primery-bg-color);
 
   @media screen and (min-width: $mobile) {
@@ -93,6 +98,12 @@
   border-bottom: 1px solid var(--card-border-color);
   border-right: 1px solid var(--card-border-color);
   border-left: 1px solid var(--card-border-color);
+}
+
+.project__content.first {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    padding-bottom: 56px;
+  }
 }
 
 .project__name {

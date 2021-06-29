@@ -583,13 +583,15 @@ img {
   fill: var(--accent-color);
 }
 
-.menu-button {
-  display: inline-block;
-  margin: 0;
-  margin-left: auto;
-  padding: 12px 8px;
-  border: none;
-  background-color: transparent;
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: flex;
+    margin: 0;
+    margin-left: auto;
+    padding: 12px 8px;
+    border: none;
+    background-color: transparent;
+  }
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -602,20 +604,19 @@ img {
   fill: var(--accent-color);
 }
 
-.menu-button:hover,
-.menu-button:focus {
-  fill: var(--accent-color);
-}
-
 .menu-button .cross-icon {
   display: none;
 }
 
-.menu-button__menu.is-open .cross-icon {
+.menu-button.is-open .cross-icon {
   display: flex;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 1;
 }
 
-.menu-button__croos.is-open .menu-icon {
+.menu-button.is-open .menu-icon {
   display: none;
 }
 
@@ -624,6 +625,11 @@ img {
   padding: 48px 40px;
   display: none;
   overflow-y: scroll;
+}
+.menu-container.is-open {
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
@@ -634,23 +640,16 @@ img {
     height: 100%;
     z-index: 100;
   }
-  .menu-container.is-open {
-    display: flex;
-    flex-direction: column;
-    pointer-events: auto;
-  }
 }
-
-.menu-nav__item {
+.menu-container .menu-nav__item {
   padding: 0;
 }
-
 @media screen and (min-width: 480px) {
-  .menu-nav__item:not(:last-child) {
+  .menu-container .menu-nav__item:not(:last-child) {
     margin-bottom: 32px;
   }
 }
-.menu-nav__link {
+.menu-container .menu-nav__link {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.18;
@@ -659,46 +658,39 @@ img {
   color: var(--primery-text-color);
   text-decoration: inherit;
 }
-
-.menu-nav__link.current {
+.menu-container .menu-nav__link.current {
   color: var(--accent-color);
 }
-
 @media screen and (min-width: 480px) {
-  .menu-contacts__item:not(:last-child) {
+  .menu-container .menu-contacts__item:not(:last-child) {
     margin-bottom: 32px;
     padding: 0;
   }
 }
-.menu__contacts {
+.menu-container .menu__contacts {
   margin-top: auto;
   margin-bottom: 64px;
 }
-
-.menu-contacts__link {
+.menu-container .menu-contacts__link {
   font-weight: 500;
   letter-spacing: 0.02em;
   text-decoration: inherit;
 }
-
-.menu-contacts__link.mail {
+.menu-container .menu-contacts__link.mail {
   font-size: 24px;
   line-height: 1.17;
   color: var(--title-text-color);
 }
-
-.menu-contacts__link.tel {
+.menu-container .menu-contacts__link.tel {
   font-size: 34px;
   line-height: 1.18;
   color: var(--accent-color);
 }
-
-.menu__socials {
+.menu-container .menu__socials {
   display: flex;
   flex-wrap: wrap;
 }
-
-.page__link {
+.menu-container .page__link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
@@ -706,8 +698,7 @@ img {
   text-decoration: inherit;
   color: var(--accent-color);
 }
-
-.social__page:not(:last-child)::after {
+.menu-container .social__page:not(:last-child)::after {
   content: "";
   width: 22px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -765,17 +756,21 @@ img {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/banner/desktop-banner@2x.jpg");
   }
 }
+@media (min-width: 320px) and (max-width: 1199px) {
+  .banner {
+    height: 400px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
 @media screen and (min-width: 480px) {
   .banner {
     max-width: 450px;
   }
 }
-@media (min-width: 320px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .banner {
     max-width: 768px;
-    height: 400px;
-    padding-top: 118px;
-    padding-bottom: 118px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1495,6 +1490,12 @@ img {
   border-bottom: 1px solid var(--card-border-color);
   border-right: 1px solid var(--card-border-color);
   border-left: 1px solid var(--card-border-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project__content.first {
+    padding-bottom: 56px;
+  }
 }
 
 .project__name {
