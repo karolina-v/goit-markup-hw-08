@@ -25,9 +25,9 @@
 }
 
 .footer__adress-pages {
-  @media screen and (min-width: $tablet) and (max-width: 1199px) {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -104,9 +104,8 @@
 }
 
 .footer__social {
-  @media screen and (min-width: $mobile) {
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
     margin: 0;
-    margin-bottom: 60px;
   }
 
   @media screen and (min-width: $tablet) and (max-width: 1199px) {

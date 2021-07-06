@@ -1,8 +1,10 @@
 .btns-filters__list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -8px;
 
   @media screen and (min-width: $mobile) {
+    margin-top: -15px;
     margin-bottom: 40px;
   }
 
@@ -17,13 +19,11 @@
   }
 }
 
-.filters__item:not(:last-child) {
-  margin-right: 8px;
-}
-
 .filters__item {
+  margin-left: 8px;
+
   @media screen and (max-width: 767px) {
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
 }
 

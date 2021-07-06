@@ -826,7 +826,8 @@ img {
 
 /* особенности */
 .features {
-  margin-right: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 @media screen and (min-width: 768px) {
   .features {
@@ -836,8 +837,8 @@ img {
 }
 
 .features__item {
-  margin-bottom: var(--card-gap);
-  margin-right: 30px;
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 }
 @media screen and (min-width: 320px) {
   .features__item {
@@ -942,12 +943,13 @@ img {
 }
 
 .team__list {
-  margin-right: -30px;
+  margin-left: -30px;
 }
 @media screen and (min-width: 768px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
   }
 }
 
@@ -956,8 +958,13 @@ img {
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-  margin-bottom: var(--card-gap);
-  margin-right: var(--card-gap);
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
+}
+@media screen and (min-width: 320px) {
+  .team__member {
+    width: calc((100% - 1 * 30px) / 1);
+  }
 }
 @media screen and (min-width: 480px) {
   .team__member {
@@ -1034,12 +1041,13 @@ img {
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .clients__group {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 }
 @media screen and (min-width: 320px) {
   .clients__group {
@@ -1110,9 +1118,11 @@ img {
   }
 }
 
+.footer__adress-pages {
+  margin-bottom: 60px;
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__adress-pages {
-    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -1189,10 +1199,9 @@ img {
   color: var(--accent-color);
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .footer__social {
     margin: 0;
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1354,9 +1363,11 @@ img {
 .btns-filters__list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -8px;
 }
 @media screen and (min-width: 320px) {
   .btns-filters__list {
+    margin-top: -15px;
     margin-bottom: 40px;
   }
 }
@@ -1373,13 +1384,12 @@ img {
   }
 }
 
-.filters__item:not(:last-child) {
-  margin-right: 8px;
+.filters__item {
+  margin-left: 8px;
 }
-
 @media screen and (max-width: 767px) {
   .filters__item {
-    margin-bottom: 15px;
+    margin-top: 15px;
   }
 }
 
@@ -1404,18 +1414,19 @@ img {
 
 /* projects cards */
 .projects {
-  margin-right: -30px;
+  margin-left: -30px;
 }
 @media screen and (min-width: 768px) {
   .projects {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
   }
 }
 
 .project {
-  margin-right: var(--card-gap);
-  margin-bottom: var(--card-gap);
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
   background-color: var(--primery-bg-color);
 }
 @media screen and (min-width: 320px) {

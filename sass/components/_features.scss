@@ -1,6 +1,7 @@
 /* особенности */
 .features {
-  margin-right: -30px;
+  margin-top: -30px;
+  margin-left: -30px;
 
   @media screen and (min-width: $tablet) {
     display: flex;
@@ -9,8 +10,8 @@
 }
 
 .features__item {
-  margin-bottom: var(--card-gap);
-  margin-right: 30px;
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 
   @media screen and (min-width: $mobile) {
     width: calc((100% - 1 * 30px) / 1);

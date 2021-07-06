@@ -4,11 +4,12 @@
 }
 
 .team__list {
-  margin-right: -30px;
+  margin-left: -30px;
 
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
   }
 }
 
@@ -17,10 +18,12 @@
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
   overflow: hidden;
-  margin-bottom: var(--card-gap);
-  margin-right: var(--card-gap);
+
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 
   @media screen and (min-width: $mobile) {
+    width: calc((100% - 1 * 30px) / 1);
   }
 
   @media screen and (min-width: 480px) {

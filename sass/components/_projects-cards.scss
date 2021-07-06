@@ -1,21 +1,17 @@
 /* projects cards */
 .projects {
-  margin-right: -30px;
+  margin-left: -30px;
 
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
   }
 }
 
 .project {
-  margin-right: var(--card-gap);
-  margin-bottom: var(--card-gap);
-
-  // border-top: transparent;
-  // border-bottom: 1px solid var(--card-border-color);
-  // border-right: 1px solid var(--card-border-color);
-  // border-left: 1px solid var(--card-border-color);
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 
   background-color: var(--primery-bg-color);
 

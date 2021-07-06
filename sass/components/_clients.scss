@@ -2,12 +2,14 @@
 .clients {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
+
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .clients__group {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin-top: var(--card-gap);
+  margin-left: var(--card-gap);
 
   @media screen and (min-width: $mobile) {
     width: calc((100% - 2 * 30px) / 2);
